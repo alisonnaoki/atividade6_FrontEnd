@@ -20,17 +20,12 @@ const TaxasConvert = {
   
     function calcular(dados) {
       console.log(dados)
-      const valorReais = Number(dados.real)
-      const TaxaConvert = TaxasConvert[dados.moeda]
+      const taxaConvert = TaxasConvert[dados.moeda]
+      const resConversao = (dados.real*taxaConvert)
   
-      if(TaxaConvert){
-        const resultadoConvert = valorReais*TaxaConvert;
-        setResultado(resultadoConvert)
-        setShowModal(true);
-      }
-      else{
-        console.error('Taxa não encontrada')
-      }
+      console.log(resConversao)
+      setResultado(resConversao)
+      setShowModal(true)
     }
 
     return(
@@ -75,7 +70,7 @@ const TaxasConvert = {
 
               <FormGroup className='mb-2 text-center'>
                 <Button
-                  onCLick={handleSubmit}
+                  onClick={handleSubmit}
                   className='me-2'
                 >
                   <FaCheck/> Calcular
