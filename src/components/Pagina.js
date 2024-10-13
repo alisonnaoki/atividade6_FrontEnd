@@ -13,7 +13,8 @@ export default function Pagina({ titulo, children }) {
           <Navbar.Brand href="/">Home</Navbar.Brand>
           <Nav className="me-auto">
             <NavDropdown title="Formulários" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/formularios/moedas">Calculadora de Moedas</NavDropdown.Item>
+              <NavDropdown.Item href="/formularios/moedas">Conversor de Moedas</NavDropdown.Item>
+              <NavDropdown.Item href="/formularios/moedas_formik">Conversor de Moedas Formik</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Container>

@@ -11,7 +11,7 @@ const TaxasConvert = {
   bitCoin: 0.000003,
 };
   
-export default function Conversor() {
+export default function ConversorFirmik() {
 
   const [showModal, setShowModal] = useState(false)
   const [real, setReal] = useState('')
